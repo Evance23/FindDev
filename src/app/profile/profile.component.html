@@ -1,1 +1,18 @@
-<p>profile works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{profileData.name}}</td>
+        <td>{{profileData.login}}</td>
+        <td>{{profileData.login}}</td>
+        <td><a [attr.href]="profileData.html_url">Check Profile</a></td>
+      </tr>
+    </tbody>
+  </table>

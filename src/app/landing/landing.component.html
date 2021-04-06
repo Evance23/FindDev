@@ -1,14 +1,17 @@
 
+
+
+
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">FindDev</button>
+        <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search" [formControl]="search">
+        <button class="btn btn-outline-success" (click)="onFindDev()" type="button">FindDev</button>
       </form>
     </div>
   </nav>
 
 
 <div>
-    <app-profile></app-profile> 
+    <app-profile [profileData]="result"></app-profile> 
 </div>
