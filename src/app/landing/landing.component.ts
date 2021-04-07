@@ -25,8 +25,11 @@ repos: any
   onFindDev(){
     // console.log(this.search.value);
     this.FindServicesservice.getProfile(this.search.value).subscribe(response => this.result=response)
-    
-
+  
  }
+//  this.FindServicesservice.getProfileRepos().subscribe(repos =>{
+//    console.log(repos)
+//    this.repos=repos
+//  }
 
 }

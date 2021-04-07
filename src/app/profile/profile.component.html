@@ -18,47 +18,43 @@
   </table> -->
 <div *ngIf="profileData">
     <div class="panel panel-default">
-        <div class="panel heading">
+        <div class="panel heading offset-4">
             {{profileData.name}} <small>({{profileData.login}})</small>
-            <span *ngIf="profileData.company">works at {{profileData.company}}</span>
+            <span *ngIf="profileData.company">Works at {{profileData.company}}</span>
         </div>
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <img src="{{profileData.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
-                <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<div class="col-sm-5">
-    <ul class="list-group">
-        <li class="list-group-item" *ngIf="profileData.bio">{{profileData.bio}}</li>
-        <li class="list-group-item" *ngIf="profileData.hireable">Available for Hire</li>
-        <li class="list-group-item" *ngIf="profileData.email"><a href="{{profileData.email}}">{{profileData.email}}</a></li>
-        <li class="list-group-item" *ngIf="profileData.bio">{{profileData.bio}}</li>
-    </ul>
-<div class="col-sm-4">
-    <div>
-        <p>
-            <span class="label-label-primary">{{profileData.followers}} Followers</span>
-            <span class="label-label-success">Following {{profileData.following}}</span>
-            <span class="label-label-default">{{profileData.public_gists}} Public gists</span>
-            <span class="label-label-info">{{profileData.public_repos}} Public Repos</span>
-        </p>
-    <p><a href="{{profileData.html_url}}" target="_blank" class="btn-btn-success btn-sm">View On Github</a></p>
-    </div>
-    <div class="panel-panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">MyRepos</h4>
-        </div>
-        <div class="panel-body" *ngFor="let repo of repos">
-            <p>
-                
-            </p>
+                </div>
 
-        </div>
+                <div class="col-sm-4">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngIf="profileData.bio">{{profileData.bio}}</li>
+                        <li class="list-group-item" *ngIf="profileData.hireable">Available for Hire</li>
+                        <li class="list-group-item" *ngIf="profileData.email"><a
+                                href="{{profileData.email}}">{{profileData.email}}</a></li>
+                        <li class="list-group-item" *ngIf="profileData.company">{{profileData.company}}</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        <p>
+                            <span class="label-label-primary">{{profileData.followers}} Followers</span>
+                            <br>
+                            <span class="label-label-success">{{profileData.following}} Following </span>
+                            <br>
+                            <span class="label-label-default">{{profileData.public_gists}} Public gists</span>
+                            <br>
+                            <span class="label-label-info">{{profileData.public_repos}} Public Repos</span>
+                        </p>
+                        <p><a href="{{profileData.html_url}}" target="_blank" class="btn-btn-success btn-sm">View On
+                                Github</a></p>
+                    </div>
 
+
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </div>
