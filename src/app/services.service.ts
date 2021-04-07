@@ -20,9 +20,10 @@ getProfile(username: string){
 return this.http.get("https://api.github.com/users/" + username + "?client_id=" + this.clientid + "&client_secret="  + this.clientsecret)
 .pipe(map((res:any)=>res))
 
-
-
-// .map((res:any)=>res.json());
-
-}}
+}
+getProfileRepos(){
+  return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id=" + this.clientid + "&client_secret="  + this.clientsecret)
+.pipe(map((res:any)=>res))
+}
+}
 

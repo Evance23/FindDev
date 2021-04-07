@@ -13,6 +13,7 @@ export class LandingComponent implements OnInit {
 
 search = new FormControl('');
 result: any
+repos: any 
 
   constructor(private FindServicesservice:ServicesService) { }
 
