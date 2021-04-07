@@ -1,4 +1,14 @@
 
 body{
      background-color: powderblue;
+     background-image: url(/src/assets/b1.png);
+}
+.fluidity{
+     background-image: url(/src/assets/b1.png);
+}
+.awe{
+     text-align: center;
+     font-weight: 500;
+     font-style: italic;
+     background-color: darkslateblue;
 }
